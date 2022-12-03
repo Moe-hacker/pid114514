@@ -20,10 +20,10 @@ int main(){
     pid_t pid=fork();
     if (pid==0){
       if (getpid()<=114513) {
-        printf("%s%d\n","Pid now: ",getpid());
+        printf("\033[1;38;2;114;51;4m%s%d\033[0m\n","Pid now: ",getpid());
         exit(0);
       }else{
-        printf("%s\n","Pid now: 114514");
+        printf("\033[1;38;2;114;51;4m%s\033[0m\n","Pid now: 114514");
         prctl(PR_SET_NAME,"1919810",NULL,NULL,NULL);
         while (1){
           sleep(1);
